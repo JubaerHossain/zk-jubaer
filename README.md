@@ -1,20 +1,13 @@
-zk-jubaer
+#<h2> zk-jubaer </h2>
 A Node.js library for ZK BioMetric Fingerprint Attendance Devices.
 
 Installation
-Use npm to install zk-jubaer:
-
-css
-Copy code
-npm i zk-jubaer
+ `npm i zk-jubaer`
 Or, if you prefer Yarn:
 
-csharp
-Copy code
-yarn add zk-jubaer
-Usage
-javascript
-Copy code
+`yarn add zk-jubaer`
+
+```js
 const ZKJUBAER = require("zk-jubaer");
 
 const runMachine = async () => {
@@ -85,7 +78,9 @@ const runMachine = async () => {
 };
 
 runMachine();
-API Reference
+```
+API Reference :
+
 createSocket() - creates a connection to the device
 getInfo() - returns general information about the device, such as log capacity and user count
 getUsers() - returns an array of all users in the device
@@ -93,5 +88,7 @@ setUser(uid, userid, name, password, role = 0, cardno = 0) - adds a new user to 
 getAttendances() - returns an array of all attendance logs in the device
 getRealTimeLogs(callback) - sets up a real-time log stream and calls the provided callback function with each new log
 getPIN() - returns the device PIN
+
+Don't forget to star the repo if you like it.
 
 
