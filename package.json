@@ -1,6 +1,6 @@
 {
   "name": "zk-jubaer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "This package allows for real-time tracking of employee attendance using a ZKTeco device and the device's IP address.",
   "main": "index.js",
   "scripts": {
