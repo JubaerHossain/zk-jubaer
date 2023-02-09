@@ -1,11 +1,12 @@
 <h1> zk-jubaer </h1>
-zk-jubaer a Node.js library for ZK BioMetric Fingerprint Attendance Devices.
-
+The zk-jubaer library is a powerful tool for Node.js developers who need to integrate their applications with ZK BioMetric Fingerprint Attendance Devices. With its simple and intuitive API, developers can easily retrieve information from the device, such as the number of users registered, logs, device version, and more. It also enables developers to add new users, retrieve real-time logs, and clear the attendance logs stored on the device. The library uses a socket connection to communicate with the device, which provides fast and reliable data transfer. Whether you need to build an attendance tracking system, a time-and-attendance management solution, or any other application that requires integration with biometric devices, the zk-jubaer library is the perfect tool to get the job done.
 
 ### Installation
- ```bash
- npm i zk-jubaer
-  ```
+
+```bash
+npm i zk-jubaer
+```
+
 Or, if you prefer Yarn:
 
 ```bash
@@ -86,6 +87,7 @@ const runMachine = async () => {
 
 runMachine();
 ```
+
 API Reference :
 
 createSocket() - creates a connection to the device
@@ -97,5 +99,3 @@ getRealTimeLogs(callback) - sets up a real-time log stream and calls the provide
 getPIN() - returns the device PIN
 
 Don't forget to star the repo if you like it.
-
-
