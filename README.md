@@ -1,5 +1,5 @@
-#<h2> zk-jubaer </h2>
-A Node.js library for ZK BioMetric Fingerprint Attendance Devices.
+<h2> zk-jubaer </h2>
+it's a Node.js library for ZK BioMetric Fingerprint Attendance Devices.
 
 Installation
  `npm i zk-jubaer`
