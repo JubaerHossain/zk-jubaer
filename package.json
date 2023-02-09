@@ -4,6 +4,7 @@
   "description": "This package allows for real-time tracking of employee attendance using a ZKTeco device and the device's IP address.",
   "main": "index.js",
   "scripts": {
+    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

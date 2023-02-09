@@ -13,7 +13,7 @@ npm i zk-jubaer or yarn add zk-jubaer
 
 const ZKJUBAER = require("zk-jubaer");
 
-const test = async () => {
+const runMachine = async () => {
   let obj = new ZKJUBAER("192.168.1.106", 4370, 5200, 5000);
   try {
     // Create socket to machine
@@ -104,6 +104,6 @@ const test = async () => {
   await obj.disconnect();
 };
 
-test(); // in the end we execute the function
+runMachine(); // in the end we execute the function
 ```
 
