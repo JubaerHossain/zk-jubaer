@@ -3,8 +3,8 @@
     Email:  jubaer01.cse@gmail.com
     Date: 2023-02-09
 */
-const { USHRT_MAX , COMMANDS } = require('./constants')
-const { log } = require('./logs')
+const { USHRT_MAX , COMMANDS } = require('../command')
+const { log } = require('../logs/log')
 
 
 const parseTimeToDate = (time)=>{

@@ -3,8 +3,8 @@
     Email:  jubaer01.cse@gmail.com
     Date: 2023-02-09
 */
-const JTCP = require('./jtcp')
-const JUDP = require('./judp')
+const JTCP = require('./src/jtcp')
+const JUDP = require('./src/judp')
 
 const { ZKError , ERROR_TYPES } = require('./src/exceptions/handler')
 
