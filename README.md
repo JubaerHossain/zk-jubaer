@@ -1,11 +1,18 @@
-<h2> zk-jubaer </h2>
-it's a Node.js library for ZK BioMetric Fingerprint Attendance Devices.
+<h1> zk-jubaer </h1>
+zk-jubaer a Node.js library for ZK BioMetric Fingerprint Attendance Devices.
 
-Installation
- `npm i zk-jubaer`
+
+### Installation
+ ```bash
+ npm i zk-jubaer
+  ```
 Or, if you prefer Yarn:
 
+```bash
 `yarn add zk-jubaer`
+```
+
+### Usage Example
 
 ```js
 const ZKJUBAER = require("zk-jubaer");
