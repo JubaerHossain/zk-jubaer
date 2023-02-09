@@ -1,0 +1,36 @@
+{
+  "name": "zk-jubaer",
+  "version": "1.0.0",
+  "description": "This package allows for real-time tracking of employee attendance using a ZKTeco device and the device's IP address.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JubaerHossain/zk-jubaer.git"
+  },
+  "keywords": [
+    "zkteco",
+    "realtime",
+    "ateendance",
+    "ip",
+    "address",
+    "jubaer",
+    "hossain",
+    "zk-jubaer"
+  ],
+  "author": "JubaerHossain",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Jubaer Hossain",
+      "email": "jubaer01.cse@gmail.com",
+      "github": "https://github.com/JubaerHossain"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/JubaerHossain/zk-jubaer/issues"
+  },
+  "homepage": "https://github.com/JubaerHossain/zk-jubaer#readme"
+}
