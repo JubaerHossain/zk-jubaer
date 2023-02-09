@@ -10,7 +10,7 @@ npm i zk-jubaer
 Or, if you prefer Yarn:
 
 ```bash
-`yarn add zk-jubaer`
+yarn add zk-jubaer
 ```
 
 ### Usage Example
