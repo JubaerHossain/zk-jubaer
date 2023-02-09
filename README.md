@@ -1,16 +1,20 @@
-# zk-jubaer
+zk-jubaer
+A Node.js library for ZK BioMetric Fingerprint Attendance Devices.
 
-- install
+Installation
+Use npm to install zk-jubaer:
 
-```
-npm i zk-jubaer or yarn add zk-jubaer
-```
+css
+Copy code
+npm i zk-jubaer
+Or, if you prefer Yarn:
 
-- Documentation
-
-```javascript
-//  test code:
-
+csharp
+Copy code
+yarn add zk-jubaer
+Usage
+javascript
+Copy code
 const ZKJUBAER = require("zk-jubaer");
 
 const runMachine = async () => {
@@ -20,90 +24,74 @@ const runMachine = async () => {
     await obj.createSocket();
 
     // Get general info like logCapacity, user counts, logs count
-    // It's really useful to check the status of device
-
     console.log(await obj.getInfo());
+
+    // Get users in machine
+    const users = await obj.getUsers();
+    console.log(users);
+
+    // Create new user
+    await obj.setUser(12, "9", "testing", "111", 0, 0);
+
+    // Get all logs in the machine
+    const logs = await obj.getAttendances();
+    console.log(logs);
+
+    // Read real-time logs
+    await obj.getRealTimeLogs((data) => {
+      console.log(data);
+    });
+
+    // Get device PIN
+    const pi = await obj.getPIN();
+    console.log(pi);
+
+    // Check Face functionality (Yes if ON, No if OFF)
+    const fo = await obj.getFaceOn();
+    console.log(fo);
+
+    // Get Self-Service-Recorder (SSR) status
+    const ssr = await obj.getSSR();
+    console.log(ssr);
+
+    // Get device version
+    const dv = await obj.getDeviceVersion();
+    console.log(dv);
+
+    // Get device name
+    const n = await obj.getDeviceName();
+    console.log(n);
+
+    // Get platform version
+    const p = await obj.getPlatform();
+    console.log(p);
+
+    // Get OS version
+    const o = await obj.getOS();
+    console.log(o);
+
+    // Get attendance size
+    const s = await obj.getAttendanceSize();
+    console.log(s);
+
+    // Clear attendance log
+    obj.clearAttendanceLog();
+
+    // Disconnect from device
+    await obj.disconnect();
   } catch (e) {
     console.log(e);
-    if (e.code === "EADDRINUSE") {
-    }
   }
-
-  // Get users in machine
-
-  const users = await obj.getUsers();
-  console.log(users);
-
-  // Create new user: setUser(uid, userid, name, password, role = 0, cardno = 0)
-
-  await obj.setUser(12, "9", "testing", "111", 0, 0);
-
-  // Get all logs in the machine
-  // Currently, there is no filter to take data, it just takes all !!
-
-  const logs = await obj.getAttendances(function () {
-    if (err) throw err;
-    console.log("Very cool!");
-  });
-  console.log(logs);
-
-  // You can also read realtime log by getRealTimelogs function
-
-  await obj.getRealTimeLogs((data) => {
-    // do something when some checkin
-    console.log(data);
-  });
-
-  // PIN of the device
-
-  const pi = await obj.getPIN();
-  console.log(pi);
-
-  // Check Face functionality (Yes if ON, No if OFF)
-
-  const fo = await obj.getFaceOn();
-  console.log(fo);
-
-  // SSR (Self-Service-Recorder)
-
-  const ssr = await obj.getSSR();
-  console.log(ssr);
-
-  // Device Version
-
-  const dv = await obj.getDeviceVersion();
-  console.log(dv);
-
-  // Device Name
-
-  const n = await obj.getDeviceName();
-  console.log(n);
-
-  // Platform Version
-
-  const p = await obj.getPlatform();
-  console.log(p);
-
-  // OS Version
-
-  const o = await obj.getOS();
-  console.log(o);
-
-  // Get Attendance size
-
-  const s = await obj.getAttendanceSize();
-  console.log(s);
-
-  // Delete the data in machine
-  // Note: You should do this when there are too many data in the machine,
-  // this issue can slow down machine.
-
-  obj.clearAttendanceLog();
-
-  // Disconnect the machine ( don't do this when you need realtime update :)))
-  await obj.disconnect();
 };
 
-runMachine(); // in the end we execute the function
-```
+runMachine();
+API Reference
+createSocket() - creates a connection to the device
+getInfo() - returns general information about the device, such as log capacity and user count
+getUsers() - returns an array of all users in the device
+setUser(uid, userid, name, password, role = 0, cardno = 0) - adds a new user to the device
+getAttendances() - returns an array of all attendance logs in the device
+getRealTimeLogs(callback) - sets up a real-time log stream and calls the provided callback function with each new log
+getPIN() - returns the device PIN
+
 
